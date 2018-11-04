@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Productos por Cliente{% endblock %}
+
+{% block page_content %}
+
+<div class="page-header" style="margin-top: 5px; margin-bottom: 5px">
+    <p>Listar todos los productos que compró un cliente.</p>
+    {{ wtf.quick_form(form) }}
+</div>
+
+<h1 style="text-transform: uppercase;"> {{ cliente }} </h1>
+
+<div>
+<table class="table" style="width:100%">
+  <tr>
+    <th>CODIGO</th>
+    <th>PRODUCTO</th> 
+    <th>CLIENTE</th>
+    <th>CANTIDAD</th> 
+    <th>PRECIO</th>
+  </tr>
+  {% for i in lista%}
+  <tr>
+    <td>{{ i[indices['indice_codigo']] }}</td>
+    <td>{{ i[indices['indice_producto']] }}</td>
+    <td>{{ i[indices['indice_cliente']] }}</td>
+    <td>{{ i[indices['indice_cantidad']] }}</td>
+    <td>{{ i[indices['indice_precio']] }}</td>
+  </tr>
+  {% endfor %}
+</table>
+</div>
+
+
+<div>
+    <a href={{ url_for('listarproductos') }} class="btn btn-success">Buscar otro cliente<a>
+</div>
+
+{% endblock %}

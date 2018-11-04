@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Mejores Clientes{% endblock %}
+
+{% block page_content %}
+
+<div class="page-header" style="margin-top: 5px; margin-bottom: 5px">
+    <p>Lista de los clientes más compradores.</p>
+</div>
+
+<h1 style="text-transform: uppercase;"> {{ lista[0][0] }} </h1>
+
+<div>
+
+<table class="table" style="width:100%">
+  <tr>
+    <th>CLIENTE</th>
+    <th>VALOR</th> 
+  </tr>
+  {% for i in range(3) %}
+  <tr>
+    <td>{{ lista[i][0] }}</td>
+    <td>$ {{ lista[i][1] }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+</div>
+
+{% endblock %}

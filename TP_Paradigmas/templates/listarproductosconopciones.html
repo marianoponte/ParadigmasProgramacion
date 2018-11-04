@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Productos por Cliente{% endblock %}
+
+{% block page_content %}
+
+<div class="page-header" style="margin-top: 5px; margin-bottom: 5px">
+    <p>Listar todos los productos que compró un cliente.</p>
+    <p><u> Clientes sugeridos: </u></p>
+<div>
+
+{% for x in lista %}
+
+<p>{{ x }}<p>
+
+{% endfor %}
+
+<div>
+    {{ wtf.quick_form(form) }}
+</div>
+
+{% endblock %}

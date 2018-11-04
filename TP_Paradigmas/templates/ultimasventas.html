@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Ventas{% endblock %}
+
+{% block page_content %}
+<h1>Bienvenido <span><i>{{ usuario }}</i></span></h1>
+
+<div>
+<p class="page-header" style="margin-top: 5px; margin-bottom: 5px">Últimas ventas.</p>
+</div>
+
+
+<br>
+
+<table class="table" style="width:100%">
+  <tr>
+    <th>CODIGO</th>
+    <th>PRODUCTO</th> 
+    <th>CLIENTE</th>
+    <th>CANTIDAD</th> 
+    <th>PRECIO</th>
+  </tr>
+  {% for i in lista%}
+  <tr>
+    <td>{{ i[indices['indice_codigo']] }}</td>
+    <td>{{ i[indices['indice_producto']] }}</td>
+    <td>{{ i[indices['indice_cliente']] }}</td>
+    <td>{{ i[indices['indice_cantidad']] }}</td>
+    <td>{{ i[indices['indice_precio']] }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+{% endblock %}
