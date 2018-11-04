@@ -1,2 +1,4 @@
 # ParadigmasProgramacion-
 IFTS 18 -  TP Paradigmas de Programacion 
+
+Este programa esta diseñado para simular un software de una empresa que posee un listado de clientes, productos, precios y cantidades contenido en un archivo ".csv" El software esta preparado para leer dicho archivo, informar si hay algun error y ademas permite trabajar a traves del navegador distintas opciones obteniendo informacion util para la empresa. Se pueden obtener lista de mejores clientes, busquedas de productos y clientes, productos mas vendidos, y ultimas ventas; todo a traves de un login de usuario que nos pedirá previamente para acceder a toda la informacion de la empresa. Tambien permite la creacion de nuevos usuarios (empleados de la empresa) y su clave de acceso. El archivo .csv puede estar divididos por columas en cualquier orden de aparicion, que el programa funcionara igual, detectando cada columna.
